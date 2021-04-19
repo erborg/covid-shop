@@ -1,10 +1,10 @@
 import React from "react";
 import {render} from "react-dom";
-import Button from "./Button";
+import Login from "./Login";
 import Shop from "./Shop";
 
 function App() {
-    return <Button><Shop/></Button>
+    return <Login><Shop/></Login>
 }
 
 render(<App/>, document.querySelector("#root"));

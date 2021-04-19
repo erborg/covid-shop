@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-export default function Button(props) {
+export default function Login(props) {
     const {children} = props
     let [authed, setAuth] = useState(false)
 
