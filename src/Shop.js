@@ -15,10 +15,15 @@ const Shop = () => {
         }
     ];
 
+    const item = items.map((object, index) => {
+        return (
+            <Item key={index} name={object.name} desc={object.desc} src={object.image}/>
+        );
+    });
+
     return (
         <div className="shop">
-            <Item name={items[0].name} desc={items[0].desc} src={items[0].image}/>
-            <Item name={items[1].name} desc={items[1].desc} src={items[1].image}/>
+            {item}
         </div>
     );
 };
