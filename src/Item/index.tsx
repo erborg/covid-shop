@@ -1,7 +1,14 @@
 import React, { useState } from 'react';
 
-export default function Item(props: { name: string; desc: string; src: string }) {
-  const { name, desc, src } = props;
+type props = {
+  image: string;
+  name: string;
+  desc: string;
+  children?: React.ReactNode;
+};
+
+export default function Item(props: { info: props }) {
+  const { info } = props;
   const [count, setCount] = useState(0);
 
   function handleAddClick() {
@@ -16,10 +23,10 @@ export default function Item(props: { name: string; desc: string; src: string })
 
   return (
     <div className="item">
-      <img src={src} />
+      <img src={info.image} />
       <div className="item-info">
-        <h2>{name}</h2>
-        <p>{desc}</p>
+        <h2>{info.name}</h2>
+        <p>{info.desc}</p>
       </div>
       <div className="item-quantity">
         <button disabled={count === 0} onClick={handleMinusClick} className="item-less">

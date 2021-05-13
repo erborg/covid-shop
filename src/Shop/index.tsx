@@ -3,7 +3,6 @@ import Item from '../Item';
 
 export default function Shop() {
   const [items, setItems] = useState<any[]>([]);
-  const [loader, setLoader] = useState(false);
 
   useEffect(() => {
     (async () => {
@@ -13,14 +12,12 @@ export default function Shop() {
         setItems(data);
       } catch (error) {
         console.error(error);
-      } finally {
-        setLoader(false);
       }
     })();
   }, []);
 
   const item = items.map((object, index) => {
-    return <Item key={index} name={object.name} desc={object.desc} src={object.image} />;
+    return <Item key={index} info={object} />;
   });
 
   return <div className="shop">{item}</div>;
