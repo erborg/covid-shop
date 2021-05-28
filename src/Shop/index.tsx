@@ -1,24 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Item from '../Item';
+import useFetch from './useFetch';
 
 export default function Shop() {
-  const [items, setItems] = useState<any[]>([]);
+  const { get, loader, items } = useFetch();
 
   useEffect(() => {
-    (async () => {
-      try {
-        const response = await fetch('https://covid-shop-mcs.herokuapp.com/');
-        const data = await response.json();
-        setItems(data);
-      } catch (error) {
-        console.error(error);
-      }
-    })();
+    get('https://covid-shop-mcs.herokuapp.com/')
+      .then((data) => console.log(data))
+      .catch((error) => console.error(error));
   }, []);
 
   const item = items.map((object, index) => {
     return <Item key={index} info={object} />;
   });
 
-  return <div className="shop">{item}</div>;
+  return <div className="shop">{loader ? 'Loading...' : item}</div>;
 }
