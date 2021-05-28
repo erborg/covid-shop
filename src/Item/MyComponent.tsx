@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import { useImage } from 'react-image';
-import Loader from 'react-loader-spinner';
+import Spinner from '../Loader';
 
 type props = {
   image: string;
@@ -14,11 +14,9 @@ function MyImageComponent(props: props) {
   return <img src={src} alt="respirator" />;
 }
 
-const loading = <Loader type="Puff" color="#00BFFF" height={100} width={100} />;
-
 export default function MyComponent(props: props) {
   return (
-    <Suspense fallback={loading}>
+    <Suspense fallback={<Spinner type={'Puff'} />}>
       <MyImageComponent image={props.image} />
     </Suspense>
   );
