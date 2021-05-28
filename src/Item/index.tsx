@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import MyComponent from './MyComponent';
 
 type props = {
   image: string;
@@ -23,7 +24,7 @@ export default function Item(props: { info: props }) {
 
   return (
     <div className="item">
-      <img src={info.image} />
+      <MyComponent image={info.image} />
       <div className="item-info">
         <h2>{info.name}</h2>
         <p>{info.desc}</p>

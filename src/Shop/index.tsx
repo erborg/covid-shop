@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import Loader from 'react-loader-spinner';
 import Item from '../Item';
 import useFetch from './useFetch';
 
@@ -14,6 +15,6 @@ export default function Shop() {
   const item = items.map((object, index) => {
     return <Item key={index} info={object} />;
   });
-
-  return <div className="shop">{loader ? 'Loading...' : item}</div>;
+  const loading = <Loader type="Puff" color="#00BFFF" height={100} width={100} />;
+  return <div className="shop">{loader ? loading : item}</div>;
 }
