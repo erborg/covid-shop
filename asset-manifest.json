@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/covid-shop/static/js/main.5b6ada85.chunk.js",
-    "main.js.map": "/covid-shop/static/js/main.5b6ada85.chunk.js.map",
+    "main.js": "/covid-shop/static/js/main.67764b47.chunk.js",
+    "main.js.map": "/covid-shop/static/js/main.67764b47.chunk.js.map",
     "runtime-main.js": "/covid-shop/static/js/runtime-main.030d23ab.js",
     "runtime-main.js.map": "/covid-shop/static/js/runtime-main.030d23ab.js.map",
     "static/js/2.86be991f.chunk.js": "/covid-shop/static/js/2.86be991f.chunk.js",
@@ -12,6 +12,6 @@
   "entrypoints": [
     "static/js/runtime-main.030d23ab.js",
     "static/js/2.86be991f.chunk.js",
-    "static/js/main.5b6ada85.chunk.js"
+    "static/js/main.67764b47.chunk.js"
   ]
 }
