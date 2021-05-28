@@ -15,6 +15,6 @@ export default function Shop() {
   const item = items.map((object, index) => {
     return <Item key={index} info={object} />;
   });
-  const loading = <Loader type="Puff" color="#00BFFF" height={100} width={100} />;
+  const loading = <Loader type="ThreeDots" color="#00BFFF" height={80} width={80} />;
   return <div className="shop">{loader ? loading : item}</div>;
 }
